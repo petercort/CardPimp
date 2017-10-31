@@ -1,0 +1,32 @@
+This is the list of stuff that I've done for this project. 
+
+Ran setup of Ruby and some ruby management stuff
+
+http://www.createdbypete.com/articles/ruby-on-rails-development-setup-for-mac-osx/
+http://12devs.co.uk/articles/writing-a-web-application-with-ruby-on-rails/
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Add Homebrews binary path to the front of the $PATH
+echo 'export PATH=/usr/local/bin:$PATH' >> ~/.bash_profile
+source ~/.bash_profile
+
+brew install rbenv ruby-build rbenv-gem-rehash
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+source ~/.bash_profile
+
+rbenv install 2.3.0
+rbenv rehash
+
+rbenv global 2.3.0
+
+gem install bundler
+
+brew install rbenv-default-gems
+echo "bundler\n" >> ~/.rbenv/default-gems
+echo "gem: --no-document\n" >> ~/.gemrc
+
+gem install bundler
+
+gem install rails -v4.0.0.rc2
+
